@@ -13,7 +13,67 @@
   <meta name="author" content="" />
 
   <title>Hogwarts</title>
-
+<style>
+  .fa{
+    line-height:30px;
+    font-size:30px;
+    display:inline-bloxk;
+    width:35px;
+    height:35px;
+  }
+  .hidden{
+    display:none;
+  }
+  
+  input[type=checkbox] + label {
+    position:relative;
+  } 
+  
+  input[type=checkbox]:checked + label {
+    animation: closing 0.3s forwards ease-in-out,
+               moving 0.3s forwards ease-in-out;
+  } 
+  .pointer-cursor{
+     cursor: pointer; cursor: hand;
+  }
+  .close{
+  
+      float:right;
+      color: #b94b45;
+      cursor: pointer; cursor: hand;
+  }
+  
+  .alert-message{
+    background-color: #f2dede;
+    border: 1px solid rgba(#34495e, 0.25);
+    color: #b94b45;
+    border-radius: 3px;
+    line-height:30px;
+    position: absolute;
+    top: 0; left: 0;
+    display:block;
+    width:100%;
+    padding: 12px;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, .9);
+    box-shadow: 0px 10px 50px rgba(0,0,0,.6);
+    background:#4980a0;
+  }
+  
+  @keyframes closing {
+    from {
+      opacity: 1; 
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  @keyframes moving {
+    0%, 90% { top: 0; left: 0; }
+    100%  { top: -100px; left: 0; }
+  }
+  </style>
 
 
   <!-- bootstrap core css -->
@@ -87,6 +147,23 @@
   </div>
   <!-- end header section -->
 
+   <!-- Alert -->
+<section class="about_section layout_padding">
+  <div class="container">
+    <div>
+       <label for="one" class="pointer-cursor" class="main-heading ">
+        click for a sweet message from hogwarts
+       </label>
+     </label> 
+    </div>
+  
+    <input type="checkbox" id="one" class="hidden" name="ossm">  
+    <label for="one" class="alert-message">
+      <strong> <i class="fa fa-heart"></i> Attention</strong> congragulations you are now the part of  our community potter heads !!
+      <span class="close">×</button>
+    </label> 
+  </div> 
+  </section>
 
   
   <!-- vehicle section -->
@@ -134,6 +211,42 @@
 
 
   <!-- vehicle section -->
+
+   <!-- progress bar -->
+   <section class="about_section layout_padding">
+    <div class="container" >
+      <h2 class="main-heading ">
+        Grifindor progress
+      </h2> 
+    <div class="progress">
+    
+      <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 75%" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <h2 class="main-heading ">
+      Hufflepuff progress
+     </h2>
+    <div class="progress">
+     
+      <div class="progress-bar progress-bar-striped bg-success" role="progressbar" style="width: 65%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    <h2 class="main-heading ">
+      Revanclaw progress
+    </h2>
+    <div class="progress">
+     
+      <div class="progress-bar progress-bar-striped bg-info" role="progressbar" style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+    
+    <h2 class="main-heading ">
+      Slytherine progress
+    </h2>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped bg-warning" role="progressbar" style="width: 50%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+   
+  </div>
+</section>
+ 
 
 
   <!-- footer section -->
